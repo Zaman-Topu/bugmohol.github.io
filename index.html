@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Mohol | System Override</title>
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts for monospace terminal and clear Bengali rendering -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Frosted Glass Menubar -->
+    <nav class="glass-nav">
+        <div class="nav-logo">বাগ মহল<span>_</span></div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="runMenuCommand('clear'); return false;">প্রচ্ছদ</a></li>
+            <li><a href="#" onclick="runMenuCommand('about'); return false;">সম্পর্কে</a></li>
+            <li><a href="#" onclick="runMenuCommand('founder'); return false;">প্রতিষ্ঠাতা</a></li>
+            <li><a href="#" onclick="runMenuCommand('contact'); return false;">যোগাযোগ</a></li>
+        </ul>
+    </nav>
+
+    <!-- CRT TV scanlines effect layer -->
+    <div class="overlay-scanline"></div>
+    
+    <div class="container">
+        <!-- Glitching Logo -->
+        <div class="glitch-wrapper">
+            <img src="Bug Mohol Logo (2).png" alt="Bug Mohol Logo" class="logo-img">
+        </div>
+
+        <!-- Hacker Terminal Window -->
+        <div class="terminal-wrapper">
+            <div class="terminal-header">root@bugmohol:~</div>
+            <div class="terminal-content" id="terminal-content">
+                <div id="output-history">
+                    <span id="typewriter-text" class="text-bengali"></span><span class="cursor" id="typewriter-cursor"></span>
+                </div>
+                <div class="input-line" id="input-line" style="display: none;">
+                    <span class="prompt">root@bugmohol:~$ </span>
+                    <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" autofocus>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
